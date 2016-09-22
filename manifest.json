@@ -1,24 +1,28 @@
 {
-	// Required
-	"manifest_version": 2,
-
-	"name": "Deu na Quina",
-	"description": "Como confiar nos números aleatórios da Quina? Confie apenas em 5 Math.random() gerados diretamente no seu Google Chrome",
+	"name": "Clean Subs",
+	"description": "Clean your subs page, removing seen videos temporarily",
 	"version": "0.0.1",
-
+	"background": {
+		"scripts": ["cleansubs.js"],
+		"persistent": false
+	},
 	"browser_action": {
-		"default_popup": "popup.html"
+		"default_icon": {
+			"24": "eye24.png",
+			"48": "eye48.png",
+			"128": "eye128.png"
+		},
+		"default_title": "Clean Subs"
 	},
-
 	"icons": {
-		"26": "icon26.png",
-		"48": "icon48.png",
-		"128": "icon128.png" 
+		"24": "eye24.png",
+		"48": "eye48.png",
+		"128": "eye128.png"
 	},
-
-	// Recommended
 	"permissions": [
 		"activeTab",
+		"background",
 		"https://ajax.googleapis.com/"
-	]
+	],
+	"manifest_version": 2
 }
